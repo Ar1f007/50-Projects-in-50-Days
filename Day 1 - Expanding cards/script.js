@@ -27,3 +27,30 @@ const slides = [
       'https://images.unsplash.com/photo-1444580442178-56153ed65706?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80',
   },
 ];
+
+slides.forEach((panel, index) => {
+  const markup = `
+    <div
+        class="panel"
+        style="
+          background-image: url('${panel.imageURL}');
+        "
+      >
+        <h3>${panel.heading}</h3>
+    </div>
+    `;
+
+  container.insertAdjacentHTML('afterbegin', markup);
+});
+
+const panels = document.querySelectorAll('.panel');
+panels[0].classList.add('active');
+
+container.addEventListener('click', (e) => {
+  removeActiveClasses();
+  e.target.closest('.panel').classList.add('active');
+});
+
+function removeActiveClasses() {
+  panels.forEach((panel) => panel.classList.remove('active'));
+}
