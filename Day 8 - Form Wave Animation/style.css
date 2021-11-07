@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: steelblue;
+  color: #fff;
+  font-family: 'Mulish', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: hsla(0, 0%, 0%, 0.4);
+  padding: 2rem 4rem;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.form-control {
+  position: relative;
+  margin: 2rem 0 4rem;
+  width: 30rem;
+}
+
+input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  display: block;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: inherit;
+}
+
+input:focus,
+input:valid {
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background-color: lightblue;
+  padding: 1.5rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+}
