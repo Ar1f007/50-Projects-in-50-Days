@@ -54,6 +54,7 @@ input {
 input:focus,
 input:valid {
   outline: none;
+  border-bottom-color: lightblue;
 }
 
 .btn {
@@ -79,4 +80,23 @@ input:valid {
 .text {
   margin-top: 3rem;
   font-size: 1.4rem;
+}
+
+label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
+
+label span {
+  display: inline-block;
+  font-size: 1.8rem;
+  min-width: 5px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+input:focus + label span,
+input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
 }
