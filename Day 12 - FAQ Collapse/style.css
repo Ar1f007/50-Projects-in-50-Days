@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin: 5rem 0 3rem;
+  font-size: 5.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 1.8rem;
+  margin-right: 3.5rem;
+}
+
+.faq-text {
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  display: none;
+}
+
+.faq.active .faq-text {
+  display: block;
+}
+
+.faq-container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  border: 1px solid #9fa4a8;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq.active::before,
+.faq.active::after {
+  content: '\f075';
+  color: #2ecc71;
+  font-family: 'Font Awesome 6 Free';
+  font-size: 7rem;
+  position: absolute;
+  opacity: 0.2;
+  top: 2rem;
+  left: 2rem;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: #3498db;
+  top: -1rem;
+  left: -3rem;
+  transform: rotateY(180deg);
+}
