@@ -83,7 +83,8 @@ body {
 
 .user-info ul li strong {
   font-size: 0.9rem;
-  margin-left: 0.5rem;
+  margin-left: 0.35rem;
+  margin-right: 1.5rem;
 }
 .repos {
   margin-top: 2rem;
