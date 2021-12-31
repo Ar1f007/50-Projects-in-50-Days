@@ -74,6 +74,7 @@ body {
   justify-content: space-between;
   padding: 0;
   max-width: 400px;
+  margin-top: 0.5rem;
 }
 
 .user-info ul li {
@@ -86,9 +87,11 @@ body {
   margin-left: 0.35rem;
   margin-right: 1.5rem;
 }
-.repos {
+
+#repos {
   margin-top: 2rem;
 }
+
 .repo {
   text-decoration: none;
   color: #fff;
