@@ -37,4 +37,21 @@ function addNewNote(text = '') {
     textArea.classList.toggle('hidden');
   });
 
+  textArea.addEventListener('input', (e) => {
+    const { value } = e.target;
 
+    main.innerHTML = marked.parse(value);
+
+    updateLocalStorage();
+  });
+  document.body.appendChild(note);
+}
+function updateLocalStorage() {
+  const notesText = document.querySelectorAll('textarea');
+
+  const notes = [];
+
+  notesText.forEach((note) => notes.push(note.value));
+
+  localStorage.setItem('notes', JSON.stringify(notes));
+}
